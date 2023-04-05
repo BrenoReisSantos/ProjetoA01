@@ -1,5 +1,5 @@
 ﻿using StronglyTypedIds;
-namespace Manutemovel.Domain.Models;
+namespace Manutemovel.Domain.Models.Entidades;
 
 public enum TipoManutencao : byte
 {
@@ -7,7 +7,7 @@ public enum TipoManutencao : byte
     Troca = 1
 }
 
-[StronglyTypedId(converters: StronglyTypedIdConverter.TypeConverter | StronglyTypedIdConverter.SystemTextJson | StronglyTypedIdConverter.EfCoreValueConverter)]
+[StronglyTypedId]
 public partial struct ModalidadeId { }
 
 public class Modalidade

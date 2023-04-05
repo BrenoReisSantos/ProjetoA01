@@ -1,7 +1,7 @@
 ﻿using StronglyTypedIds;
-namespace Manutemovel.Domain.Models;
+namespace Manutemovel.Domain.Models.Entidades;
 
-[StronglyTypedId(converters: StronglyTypedIdConverter.TypeConverter | StronglyTypedIdConverter.SystemTextJson | StronglyTypedIdConverter.EfCoreValueConverter)]
+[StronglyTypedId]
 public partial struct CarroId { }
 
 public class Carro
