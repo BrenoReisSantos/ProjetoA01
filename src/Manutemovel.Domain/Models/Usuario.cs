@@ -1,13 +1,12 @@
-﻿namespace Manutemovel.Domain.Models;
+﻿using StronglyTypedIds;
+namespace Manutemovel.Domain.Models;
 
-public record UsuarioId(Guid Value)
-{
-    public static UsuarioId Novo() => new(Guid.NewGuid());
-}
+[StronglyTypedId(converters: StronglyTypedIdConverter.TypeConverter | StronglyTypedIdConverter.SystemTextJson | StronglyTypedIdConverter.EfCoreValueConverter)]
+public partial struct UsuarioId { }
 
 public class Usuario
 {
-    public UsuarioId Id { get; init; } = new();
+    public UsuarioId UsuarioId { get; init; } = UsuarioId.New();
     public string Nome { get; init; } = string.Empty;
     public string Username { get; init; } = string.Empty;
     public string CPFCNPJ { get; init; } = string.Empty;

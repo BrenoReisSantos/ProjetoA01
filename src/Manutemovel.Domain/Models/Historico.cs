@@ -1,15 +1,13 @@
-﻿using System;
+﻿using StronglyTypedIds;
 namespace Manutemovel.Domain.Models;
 
-public record HistoricoId(Guid Value)
-{
-    public static HistoricoId Novo() => new(Guid.NewGuid());
-}
+[StronglyTypedId(converters: StronglyTypedIdConverter.TypeConverter | StronglyTypedIdConverter.SystemTextJson | StronglyTypedIdConverter.EfCoreValueConverter)]
+public partial struct HistoricoId { }
 
 public class Historico
 {
-    public HistoricoId Id { get; init; } = new();
+    public HistoricoId HistoricoId { get; init; } = HistoricoId.New();
     public DateTime Data { get; init; }
-    public Carro Carro { get; init; }
-    public Usuario Usuario { get; init; }
+    public Carro Carro { get; init; } = new();
+    public Usuario Usuario { get; init; } = new();
 }

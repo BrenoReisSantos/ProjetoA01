@@ -1,14 +1,12 @@
-﻿using System;
+﻿using StronglyTypedIds;
 namespace Manutemovel.Domain.Models;
 
-public record ItemId(Guid Value)
-{
-    public static ItemId Novo() => new(Guid.NewGuid());
-}
+[StronglyTypedId(converters: StronglyTypedIdConverter.TypeConverter | StronglyTypedIdConverter.SystemTextJson | StronglyTypedIdConverter.EfCoreValueConverter)]
+public partial struct ItemId { }
 
 public class Item
 {
-    public ItemId Id { get; init; } = new();
+    public ItemId ItemId { get; init; } = ItemId.New();
     public string Nome { get; init; } = string.Empty;
     public List<ModeloItem> ModelosItens { get; init; } = new();
 }

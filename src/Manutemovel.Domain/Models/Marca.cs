@@ -1,13 +1,12 @@
-﻿namespace Manutemovel.Domain.Models;
+﻿using StronglyTypedIds;
+namespace Manutemovel.Domain.Models;
 
-public record MarcaId(Guid Value)
-{
-    public static MarcaId Novo() => new(Guid.NewGuid());
-}
+[StronglyTypedId(converters: StronglyTypedIdConverter.TypeConverter | StronglyTypedIdConverter.SystemTextJson | StronglyTypedIdConverter.EfCoreValueConverter)]
+public partial struct MarcaId { }
 
 public class Marca
 {
-    public MarcaId Id { get; init; } = new();
+    public MarcaId MarcaId { get; init; } = MarcaId.New();
     public string Nome { get; init; } = string.Empty;
     public List<ModeloAno> ModelosAnos { get; init; } = new();
 }
