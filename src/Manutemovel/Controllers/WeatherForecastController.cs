@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 
-namespace ProjetoA01.Controllers;
+namespace Manutemovel.Controllers;
 
 [ApiController]
 [Route("[controller]")]
