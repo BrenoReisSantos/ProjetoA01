@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{5BAC8796-70D2-4790-9BE9-57494954BD16}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Manutemovel", "src\Manutemovel\Manutemovel.csproj", "{62224850-D224-4836-9701-BCC02476A41E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Manutemovel.Domain", "src\Manutemovel.Domain\Manutemovel.Domain.csproj", "{75DD881B-D69E-43AE-BF89-11886888F524}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{62224850-D224-4836-9701-BCC02476A41E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{62224850-D224-4836-9701-BCC02476A41E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{62224850-D224-4836-9701-BCC02476A41E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{62224850-D224-4836-9701-BCC02476A41E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{75DD881B-D69E-43AE-BF89-11886888F524}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{75DD881B-D69E-43AE-BF89-11886888F524}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{75DD881B-D69E-43AE-BF89-11886888F524}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{75DD881B-D69E-43AE-BF89-11886888F524}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{62224850-D224-4836-9701-BCC02476A41E} = {5BAC8796-70D2-4790-9BE9-57494954BD16}
+		{75DD881B-D69E-43AE-BF89-11886888F524} = {5BAC8796-70D2-4790-9BE9-57494954BD16}
+	EndGlobalSection
+EndGlobal
