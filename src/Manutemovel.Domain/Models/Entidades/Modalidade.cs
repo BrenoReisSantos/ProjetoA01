@@ -3,8 +3,8 @@ namespace Manutemovel.Domain.Models.Entidades;
 
 public enum TipoManutencao : byte
 {
-    Inspecao = 0,
-    Troca = 1
+    Inspecao,
+    Troca
 }
 
 [StronglyTypedId]

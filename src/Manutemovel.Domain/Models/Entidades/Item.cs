@@ -8,5 +8,5 @@ public class Item
 {
     public ItemId ItemId { get; init; } = ItemId.New();
     public string Nome { get; init; } = string.Empty;
-    public List<ModeloItem> ModelosItens { get; init; } = new();
+    public IEnumerable<ModeloItem> ModelosItens { get; init; } = Enumerable.Empty<ModeloItem>();
 }

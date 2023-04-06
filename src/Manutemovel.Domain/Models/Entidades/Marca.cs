@@ -8,5 +8,5 @@ public class Marca
 {
     public MarcaId MarcaId { get; init; } = MarcaId.New();
     public string Nome { get; init; } = string.Empty;
-    public List<ModeloAno> ModelosAnos { get; init; } = new();
+    public IEnumerable<ModeloAno> ModelosAnos { get; init; } = Enumerable.Empty<ModeloAno>();
 }

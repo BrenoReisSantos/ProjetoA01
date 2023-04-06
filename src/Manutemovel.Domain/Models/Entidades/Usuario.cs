@@ -13,5 +13,5 @@ public class Usuario
     public string Telefone { get; init; } = string.Empty;
     public string Email { get; init; } = string.Empty;
     public string Senha { get; init; } = string.Empty;
-    public List<Carro> Carros { get; init; } = new();
+    public IEnumerable<Carro> Carros { get; init; } = Enumerable.Empty<Carro>();
 }
