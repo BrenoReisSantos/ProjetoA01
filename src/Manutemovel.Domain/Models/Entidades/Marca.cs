@@ -2,7 +2,15 @@
 namespace Manutemovel.Domain.Models.Entidades;
 
 [StronglyTypedId]
-public partial struct MarcaId { }
+public partial struct MarcaId
+{
+    public static bool TryParse(string value, out MarcaId marcaId)
+    {
+        var couldConvert = Guid.TryParse(value, out var guid);
+        marcaId = new MarcaId(guid);
+        return couldConvert;
+    }
+}
 
 public class Marca
 {

@@ -8,7 +8,15 @@ public enum TipoManutencao : byte
 }
 
 [StronglyTypedId]
-public partial struct ModalidadeId { }
+public partial struct ModalidadeId
+{
+    public static bool TryParse(string value, out ModalidadeId modalidadeId)
+    {
+        var couldConvert = Guid.TryParse(value, out var guid);
+        modalidadeId = new ModalidadeId(guid);
+        return couldConvert;
+    }
+}
 
 public class Modalidade
 {

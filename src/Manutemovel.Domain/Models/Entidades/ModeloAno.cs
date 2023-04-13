@@ -2,7 +2,15 @@
 namespace Manutemovel.Domain.Models.Entidades;
 
 [StronglyTypedId]
-public partial struct ModeloAnoId { }
+public partial struct ModeloAnoId
+{
+    public static bool TryParse(string value, out ModeloAnoId modeloAnoId)
+    {
+        var couldConvert = Guid.TryParse(value, out var guid);
+        modeloAnoId = new ModeloAnoId(guid);
+        return couldConvert;
+    }
+}
 
 public class ModeloAno
 {
